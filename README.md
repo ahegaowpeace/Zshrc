@@ -1,0 +1,4 @@
+## pecoインストール
+```
+$ brew install peco
+```
