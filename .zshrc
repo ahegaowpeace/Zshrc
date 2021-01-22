@@ -38,6 +38,7 @@ RPROMPT='`rprompt-git-current-branch`'
 alias tmux="tmux -2 new-session \; source-file ~/.tmux/new-session"
 # history増加
 alias history='history -500'
+
 # dirs複数業表示
 alias dirs='dirs -v'
 # pushdのキーストロークを減らす
@@ -54,3 +55,10 @@ function pds() {
   pushd +$pushd_number
   return $?
 }
+
+#git-promptの読み込み
+source ~/.zsh/git-prompt.sh
+# git-completionの読み込み
+fpath=(~/.zsh $fpath)
+zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
+autoload -Uz compinit && compinit
