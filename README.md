@@ -2,7 +2,7 @@
 ```
 $ brew install peco
 ```
-## git-prompt/git-completionの用意(promptは正直不要)
+## git-completion(タブ補完)の用意(promptは正直不要)
 ```
 mkdir ~/.zsh
 cd ~/.zsh
